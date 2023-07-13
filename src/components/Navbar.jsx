@@ -7,6 +7,14 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
+  function toggleTheme() {
+    if (document.body.classList.contains("light-mode")) {
+      document.body.removeAttribute("class");
+    } else {
+      document.body.classList.add("light-mode");
+    }
+  }
+
   function handleClick() {
     setIsMobileNavOpen(!isMobileNavOpen);
   }
@@ -48,7 +56,11 @@ export const Navbar = () => {
             </li>
             <li className="header__line"></li>
             <li>
-              <button id="theme-toggle" className="header__sun">
+              <button
+                id="theme-toggle"
+                className="header__sun"
+                onClick={toggleTheme}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -115,7 +127,11 @@ export const Navbar = () => {
             </li>
             <li className="mobile-nav__link-line"></li>
             <li>
-              <button id="theme-toggle" className="mobile-nav__sun">
+              <button
+                id="theme-toggle"
+                className="mobile-nav__sun"
+                onClick={toggleTheme}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

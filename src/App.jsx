@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Shop } from "./pages/shop/shop";
 import { ShopContextProvider } from "./context/shop-context";
+
 import Home from "./pages/home/Home";
 
 function App() {
