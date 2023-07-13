@@ -39,7 +39,8 @@
   background-color: rgba(79, 70, 229, 0.3);
 }
 
-.product__project:not(:last-child) {
+.product__project {
+  margin-top: 5rem;
   margin-bottom: 5rem;
 }
 
