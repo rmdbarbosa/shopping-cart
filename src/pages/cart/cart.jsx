@@ -30,12 +30,11 @@ const OVERLAY_STYLES = {
   zIndex: 1000,
 };
 
-export const Cart = ({ open, children, onClose }) => {
+export const Cart = ({ open, onClose }) => {
   if (!open) return null;
   const { cartItems, getTotalCartAmount } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
 
-  const navigate = useNavigate();
   return ReactDom.createPortal(
     <>
       <div style={OVERLAY_STYLES} onClick={onClose} />
@@ -64,7 +63,7 @@ export const Cart = ({ open, children, onClose }) => {
         ) : (
           <div className="cart__empty">
             <h1 className="cart__empty__text">Empty cart</h1>
-            <img className="cart__empty__img" src="public/empty-cart.png" />
+            <img className="cart__empty__img" src="/empty-cart.png" />
           </div>
         )}
       </div>
