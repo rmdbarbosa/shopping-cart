@@ -9,8 +9,10 @@ export const Navbar = () => {
 
   function toggleTheme() {
     if (document.body.classList.contains("light-mode")) {
+      localStorage.removeItem("theme");
       document.body.removeAttribute("class");
     } else {
+      localStorage.setItem("theme", "light-mode");
       document.body.classList.add("light-mode");
     }
   }
