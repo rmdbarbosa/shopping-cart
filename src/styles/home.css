@@ -1,0 +1,18 @@
+.home {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  cursor: pointer;
+  color: var(--clr-slate400);
+  font-size: var(--size-xl);
+  transition: color 1s;
+}
+
+.home:hover {
+  color: var(--clr-rose);
+}

@@ -1,0 +1,258 @@
+.product {
+  text-align: center;
+}
+
+.product__title {
+  font-size: var(--size-2xl);
+  color: var(--clr-light);
+}
+
+.product__description {
+  max-width: 60ch;
+  font-size: var(--size-sm);
+  color: var(--clr-slate600);
+
+  margin: 1rem auto;
+}
+
+.product__project-title {
+  font-size: var(--size-base);
+  margin-bottom: 1rem;
+}
+.product__img-wrapper {
+  position: relative;
+}
+
+.product__img-wrapper::after {
+  content: "";
+  background-color: rgba(79, 70, 229, 0.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: background-color 0.3s;
+}
+
+.product__img-wrapper:hover::after {
+  background-color: rgba(79, 70, 229, 0.3);
+}
+
+.product__project:not(:last-child) {
+  margin-bottom: 5rem;
+}
+
+.product__project-description1 {
+  font-size: var(--size-sm);
+  color: var(--clr-slate600);
+  margin: 1rem 0;
+}
+
+.product__project-description2 {
+  font-size: var(--size-sm);
+  color: var(--clr-slate400);
+  margin-bottom: 1rem;
+}
+
+.product__project-btn {
+  font-size: var(--size-sm);
+}
+
+.product__project-subtitle {
+  display: none;
+}
+/* xs  */
+@media (min-width: 475px) {
+  .product__title {
+    font-size: var(--size-3xl);
+  }
+
+  .product__description {
+    font-size: var(--size-base);
+
+    margin: 1.5rem auto;
+  }
+
+  .product__project-title {
+    font-size: var(--size-lg);
+    margin-bottom: 1.5rem;
+  }
+
+  .product__project-description1 {
+    font-size: var(--size-base);
+    margin: 1.5rem 0;
+  }
+
+  .product__project-description2 {
+    font-size: var(--size-base);
+    margin-bottom: 1.5rem;
+  }
+
+  .product__project-btn {
+    font-size: var(--size-base);
+  }
+}
+/* sm */
+@media (min-width: 640px) {
+  .product__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    grid-template-areas:
+      "image1 content1"
+      "content2 image2"
+      "image3 content3"
+      "content4 image4"
+      "image5 content5"
+      "content6 image6";
+  }
+
+  .product__image1 {
+    grid-area: image1;
+  }
+  .product__image2 {
+    grid-area: image2;
+  }
+  .product__image3 {
+    grid-area: image3;
+  }
+  .product__image4 {
+    grid-area: image4;
+  }
+  .product__image5 {
+    grid-area: image5;
+  }
+  .product__image6 {
+    grid-area: image6;
+  }
+
+  .product__content1 {
+    grid-area: content1;
+  }
+  .product__content2 {
+    grid-area: content2;
+  }
+  .product__content3 {
+    grid-area: content3;
+  }
+  .product__content4 {
+    grid-area: content4;
+  }
+  .product__content5 {
+    grid-area: content5;
+  }
+  .product__content6 {
+    grid-area: content6;
+  }
+
+  .product__project {
+    padding: 0 1rem;
+  }
+
+  .product__project-title {
+    display: none;
+  }
+
+  .product__project-description1 {
+    font-size: var(--size-xs);
+    margin: 1em 0;
+  }
+
+  .product__project-description2 {
+    font-size: var(--size-xs);
+    margin-bottom: 1em;
+  }
+
+  .product__project-btn {
+    font-size: var(--size-xs);
+  }
+
+  .product__project:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .product__project-subtitle {
+    display: block;
+    font-size: var(--size-base);
+  }
+}
+/* md */
+@media (min-width: 768px) {
+  .product__project-description1 {
+    font-size: var(--size-sm);
+  }
+
+  .product__project-description2 {
+    font-size: var(--size-sm);
+  }
+
+  .product__project-btn {
+    font-size: var(--size-sm);
+  }
+  .product__project-subtitle {
+    font-size: var(--size-lg);
+  }
+}
+
+/* Lg */
+@media (min-width: 1024px) {
+  .product__title {
+    font-size: var(--size-4xl);
+  }
+
+  .product__description {
+    font-size: var(--size-lg);
+  }
+  .product__project-description1 {
+    font-size: var(--size-base);
+  }
+
+  .product__project-description2 {
+    font-size: var(--size-base);
+  }
+
+  .product__project-btn {
+    font-size: var(--size-base);
+  }
+  .product__project-subtitle {
+    font-size: var(--size-xl);
+  }
+}
+/* xL */
+@media (min-width: 1280px) {
+  .product__title {
+    font-size: var(--size-5xl);
+  }
+
+  .product__description {
+    font-size: var(--size-xl);
+
+    margin: 2rem auto;
+  }
+  .product__project-description1 {
+    font-size: var(--size-lg);
+  }
+
+  .product__project-description2 {
+    font-size: var(--size-lg);
+  }
+
+  .product__project-btn {
+    font-size: var(--size-lg);
+  }
+  .product__project-subtitle {
+    font-size: var(--size-2xl);
+  }
+
+  .product__container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+/* 2xl */
+@media (min-width: 1536px) {
+  .product__container {
+    width: 70%;
+  }
+}
