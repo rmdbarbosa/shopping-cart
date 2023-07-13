@@ -1,14 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import NewCart from "../pages/cart/NewCart";
+import { useState } from "react";
 
 export const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <header className="header container">
         <nav>
           <ul className="header__menu">
             <li>
-              <Link to="/home" className="header__link">
+              <Link to="/" className="header__link">
                 Home
               </Link>
             </li>
@@ -21,6 +24,14 @@ export const Navbar = () => {
               <Link to="/cart" className="header__link">
                 Cart
               </Link>
+            </li>
+            <li>
+              <button className="header__link" onClick={() => setIsOpen(true)}>
+                NewCart
+              </button>
+              <NewCart open={isOpen} onClose={() => setIsOpen(false)}>
+                Fancy Modal
+              </NewCart>
             </li>
             <li className="header__line"></li>
             <li>
