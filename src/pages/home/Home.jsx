@@ -10,7 +10,7 @@ export default function Home() {
       onClick={() => navigate("/shop")}
     >
       <span className="glowing-txt">
-        V<span className="faulty-letter">O</span>VOZINHA SHOP
+        S<span className="faulty-letter">HO</span>P
       </span>
     </button>
   );
