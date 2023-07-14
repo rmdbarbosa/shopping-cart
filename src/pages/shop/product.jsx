@@ -1,8 +1,10 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import React from "react";
 import { ShopContext } from "../../context/shop-context";
+import { Cart } from "../cart/cart";
 
 export const Product = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
   const { id, productName, price, productImage } = props.data;
   const { addToCart, cartItems } = useContext(ShopContext);
 
@@ -33,12 +35,14 @@ export const Product = (props) => {
           <b>{productName}</b>
         </p>
         <p>${price}</p>
-        <button
-          className="btn product__project-btn"
-          onClick={() => addToCart(id)}
-        >
-          Add To Cart {cartItemAmount > 0 && <> ({cartItemAmount})</>}
+        <button className="btn faulty-letter" onClick={() => addToCart(id)}>
+          Add To Cart
+          {cartItemAmount > 0 && <> ({cartItemAmount})</>}
         </button>
+        <button onClick={() => setIsOpen(true)}>
+          <img className="cartIco" src="/cart.ico" height={"30px"} />
+        </button>
+        <Cart open={isOpen} onClose={() => setIsOpen(false)}></Cart>
       </div>
     </>
   );

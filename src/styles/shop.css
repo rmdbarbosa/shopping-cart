@@ -15,6 +15,10 @@
 
 /*  */
 
+.cartIco {
+  margin-bottom: 0.5rem;
+}
+
 .product {
   text-align: center;
 }
@@ -57,8 +61,10 @@
 }
 
 .product__project {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 0.5rem;
 }
 
 .product__project-description1 {
